@@ -1,0 +1,7 @@
+# Copier ce fichier en application-local.properties (gitignore) et remplir les valeurs
+# Lancer l'app avec : export DB_PASSWORD=... && export JWT_SECRET=...
+# Ou via IntelliJ : Run > Edit Configurations > Environment variables
+
+DB_PASSWORD=votre_mot_de_passe_postgresql
+JWT_SECRET=votre_cle_secrete_jwt_base64_encodee
+SUPER_ADMIN_PASSWORD=votre_mot_de_passe_super_admin
