@@ -4,4 +4,5 @@
 
 DB_PASSWORD=votre_mot_de_passe_postgresql
 JWT_SECRET=votre_cle_secrete_jwt_base64_encodee
+SUPER_ADMIN_EMAIL=votre_email_super_admin
 SUPER_ADMIN_PASSWORD=votre_mot_de_passe_super_admin
