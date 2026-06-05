@@ -93,8 +93,6 @@ cd RapidGaz
 
 ```sql
 CREATE DATABASE gas_db;
-CREATE USER sama_pgsql WITH ENCRYPTED PASSWORD 'votre_mot_de_passe';
-GRANT ALL PRIVILEGES ON DATABASE gas_db TO sama_pgsql;
 ```
 
 ### 3. Configurer les variables locales
