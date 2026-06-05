@@ -1,8 +1,14 @@
 # Copier ce fichier en application-local.properties (gitignore) et remplir les valeurs
-# Lancer l'app avec : export DB_PASSWORD=... && export JWT_SECRET=...
-# Ou via IntelliJ : Run > Edit Configurations > Environment variables
+# Lancer l'app avec IntelliJ : Run > Edit Configurations > Environment variables
 
+DB_URL=jdbc:postgresql://localhost:5432/gas_db
+DB_USERNAME=votre_utilisateur_postgresql
 DB_PASSWORD=votre_mot_de_passe_postgresql
+
 JWT_SECRET=votre_cle_secrete_jwt_base64_encodee
+
+CORS_ALLOWED_ORIGINS=http://localhost:3000
+
 SUPER_ADMIN_EMAIL=votre_email_super_admin
 SUPER_ADMIN_PASSWORD=votre_mot_de_passe_super_admin
+SUPER_ADMIN_NAME=votre_nom_super_admin
