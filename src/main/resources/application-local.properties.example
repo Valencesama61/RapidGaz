@@ -5,6 +5,9 @@ DB_URL=jdbc:postgresql://localhost:5432/gas_db
 DB_USERNAME=votre_utilisateur_postgresql
 DB_PASSWORD=votre_mot_de_passe_postgresql
 
+# update pour le premier déploiement, validate ensuite
+DDL_AUTO=update
+
 JWT_SECRET=votre_cle_secrete_jwt_base64_encodee
 
 CORS_ALLOWED_ORIGINS=http://localhost:3000

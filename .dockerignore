@@ -1,0 +1,7 @@
+.git
+.idea
+.mvn/wrapper/maven-wrapper.jar
+target/
+*.md
+folder/
+src/main/resources/application-local.properties
