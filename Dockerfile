@@ -20,6 +20,8 @@ EXPOSE 8080
 # Flags JVM adaptés aux conteneurs 256 MB (Fly.io free tier)
 ENTRYPOINT ["java", \
   "-XX:+UseContainerSupport", \
-  "-XX:MaxRAMPercentage=75.0", \
+  "-XX:MaxRAMPercentage=70.0", \
   "-XX:+UseG1GC", \
+  "-XX:MaxMetaspaceSize=128m", \
+  "-Djava.security.egd=file:/dev/./urandom", \
   "-jar", "app.jar"]
