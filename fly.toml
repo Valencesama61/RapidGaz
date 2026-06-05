@@ -1,4 +1,4 @@
-app = "rapidgaz-api"
+app = "rapidgaz"
 primary_region = "cdg"
 
 [build]
@@ -14,6 +14,13 @@ primary_region = "cdg"
     type = "connections"
     hard_limit = 25
     soft_limit = 20
+
+  [[http_service.checks]]
+    grace_period = "90s"
+    interval = "30s"
+    method = "GET"
+    path = "/v3/api-docs"
+    timeout = "15s"
 
 [[vm]]
   memory = "256mb"
