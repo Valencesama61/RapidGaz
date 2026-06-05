@@ -1,4 +1,4 @@
-# RapidGaz — API REST Backend
+# RapidGaz - API REST Backend
 
 API REST pour la plateforme **RapidGaz**, permettant la gestion des vendeurs de gaz, de leurs stocks, de leurs produits et de leur localisation. Construite avec **Spring Boot 4** et **Java 21**.
 
@@ -113,7 +113,7 @@ SUPER_ADMIN_EMAIL=votre_email_super_admin
 SUPER_ADMIN_PASSWORD=votre_mot_de_passe_super_admin
 ```
 
-> `application-local.properties` est dans le `.gitignore` — il ne sera jamais commité.
+> `application-local.properties` est dans le `.gitignore` - il ne sera jamais commité.
 
 ---
 
@@ -170,7 +170,7 @@ L'API utilise **JWT stateless** (pas de session serveur).
 | Rôle | Accès |
 |---|---|
 | **Public** (non authentifié) | `/api/public/**`, `/api/v1/auth/**`, `/api/admin/auth/**`, Swagger |
-| **SELLER** (vendeur authentifié) | `/api/v1/**` — profil, produits, stock, localisation |
+| **SELLER** (vendeur authentifié) | `/api/v1/**` - profil, produits, stock, localisation |
 | **ADMIN** | `/api/admin/sellers/**`, `/api/admin/catalog/**`, `/api/admin/stats` |
 | **SUPER_ADMIN** | Tout ce qu'ADMIN peut faire + `/api/admin/users/**` (gestion des admins) |
 
@@ -178,14 +178,14 @@ L'API utilise **JWT stateless** (pas de session serveur).
 
 ## Endpoints de l'API
 
-### Authentification publique — Vendeur
+### Authentification publique - Vendeur
 
 | Méthode | Route | Description |
 |---|---|---|
 | `POST` | `/api/v1/auth/register` | Inscription d'un vendeur |
 | `POST` | `/api/v1/auth/login` | Connexion vendeur, retourne un JWT |
 
-### Authentification — Admin
+### Authentification - Admin
 
 | Méthode | Route | Description |
 |---|---|---|
@@ -238,7 +238,7 @@ http://localhost:8080/v3/api-docs
 
 Au démarrage, `DataInitializer` exécute automatiquement :
 
-**Super Admin** — créé ou mis à jour depuis les variables d'environnement :
+**Super Admin** - créé ou mis à jour depuis les variables d'environnement :
 - Email : `SUPER_ADMIN_EMAIL`
 - Mot de passe : `SUPER_ADMIN_PASSWORD`
 - Rôle : `SUPER_ADMIN`
