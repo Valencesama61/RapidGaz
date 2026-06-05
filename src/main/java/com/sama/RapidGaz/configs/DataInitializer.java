@@ -156,10 +156,10 @@ public class DataInitializer implements CommandLineRunner {
                         .setSeller(seller);
                 productRepository.save(product);
 
-                GasStock stock = new GasStock()
-                        .setQuantity(p.qty())
-                        .setSeller(seller)
-                        .setProduct(product);
+                GasStock stock = new GasStock();
+                stock.setQuantity(p.qty());
+                stock.setSeller(seller);
+                stock.setProduct(product);
                 stockRepository.save(stock);
             }
 
