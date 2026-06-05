@@ -22,4 +22,4 @@ primary_region = "cdg"
 
 [env]
   SPRING_PROFILES_ACTIVE = "prod"
-  DDL_AUTO = "update"
+  DDL_AUTO = "validate"
