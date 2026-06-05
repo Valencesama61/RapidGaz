@@ -1,25 +1,31 @@
-app = "rapidgaz-api"
-primary_region = "cdg"
+# fly.toml app configuration file generated for rapidgaz on 2026-06-05T11:38:14Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'rapidgaz'
+primary_region = 'cdg'
 
 [build]
+
+[env]
+  DDL_AUTO = 'validate'
+  SPRING_PROFILES_ACTIVE = 'prod'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
 
   [http_service.concurrency]
-    type = "connections"
+    type = 'connections'
     hard_limit = 25
     soft_limit = 20
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
-
-[env]
-  SPRING_PROFILES_ACTIVE = "prod"
-  DDL_AUTO = "validate"
+  memory_mb = 256
